@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation | Signup</title>
+    <script src="https://kit.fontawesome.com/b49db04606.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Open+Sans:wght@300;400&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(138, 218, 248);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.icon i{
+    font-size: xx-large;
+    color: rgb(231, 91, 152);
+}
+
+.container {
+    display: flex;
+    width: 50%;
+    height: 500px;
+    margin: auto 50px;
+    background: rgba(206, 67, 67, 0.5);
+    margin-left: 250px;
+    text-align: center;
+}
+
+.login {
+    display: flex;
+    /* background-color: #fff; */
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    color: white;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.head{
+    font-size: 25px;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.head-2{
+    margin-bottom: 50px;
+}
+
+.button-2{
+    margin-top: 40px;
+}
+
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form label{
+    display: inline-block;
+    /* color: rgb(99, 98, 98); */
+    color: white;
+    font-size: smaller;
+}
+
+.form span{
+    color: white;
+    font-size: x-small;
+}
+
+form input{
+    color: white;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    width: 90%;
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+    outline: 0;
+}
+
+form input:focus{
+    border: 0;
+    border-bottom: 1px solid rgb(156, 3, 179);
+}
+
+#check{
+    margin-top: 20px;
+}
+
+.check{
+    width: 80%;
+    text-align: center;
+}
+
+.button{
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+#signup{
+    color: white;
+    margin-bottom: 20px;
+    border: 1px solid rgb(111, 184, 86);
+    background-color: rgb(58, 20, 227);
+    outline: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: x-small;
+    border-radius: 25px;
+}
+
+.button a{
+    color: white;
+    font-size: smaller;
+}
+
+.form span{
+    color: rgb(206, 8, 8)
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <form action="first page.html" >
+                <div class="icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <div class="head">
+                User Login
+                </div>
+                <div class="form">
+                    <label for="fname">Name</label><br>
+                    <input type="text" name="fname" id="fname"><br>
+                    <span class="fname"></span><br>
+                    
+                    <label for="email">Email</label><br>
+                    <input name="email" id="email"><br>
+                    <span class="email"></span><br>
+                    
+                    <label for="pass">Password</label><br>
+                    <input name="pass" id="pass"><br>
+                    <span class="pass"></span>
+
+                    
+
+            <br>
+                    <div class="button"></div>
+                      <a href="first page.html"> <button id="signup" type="submit" onclick="return validate()">Login</button></a>
+                    
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    <script>
+        function validate(e) {
+    var fname = document.getElementById("fname").value;
+    var number = document.getElementById("number").value;
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("pass").value;
+    var check = document.getElementById("check");
+    var evalidate = /^([a-zA-Z0-9\._]+)@([a-z0-9A-A])+.([a-z]+)(.[a-z]+)?$/
+    var nvalidate = /^[6-9]{1}[0-9]{9}$/;
+    var navalidate = /^[a-zA-Z]/;
+    if(fname==""){
+        document.querySelector(".fname").innerHTML = "** Enter your Name";
+        return false;
+    }
+    else if(!fname.match(navalidate)){
+        document.querySelector(".fname").innerHTML = "** Invalid Name";
+        return false;
+    }
+    else if(number==""){
+        document.querySelector(".fname").innerHTML = "";
+        document.querySelector(".number").innerHTML = "** Enter your Phone Number";
+        return false;
+    }
+    else if(!number.match(nvalidate)){
+        document.querySelector(".number").innerHTML = "** Invalid Phone Number";
+        return false;
+    }
+    else if(email==""){
+        document.querySelector(".number").innerHTML = "";
+        document.querySelector(".email").innerHTML = "** Enter your Email";
+        return false;
+    }
+    else if(!email.match(evalidate)){
+        document.querySelector(".email").innerHTML = "** Enter correct Email";
+        return false;
+    }
+    else if(pass==""){
+        document.querySelector(".email").innerHTML = "";
+        document.querySelector(".pass").innerHTML = "** Enter password";
+        return false;
+    }
+    else if(pass.length<5 || pass.length>20){
+        document.querySelector(".pass").innerHTML = "** Password length should be between 5 to 20";
+        return false;
+    }
+    else if(check.checked==false){
+        document.querySelector(".pass").innerHTML = "";
+        document.querySelector(".check-2").innerHTML = "** Tick the check box";
+        return false;
+    }
+    else{
+        document.querySelector(".check-2").innerHTML = "";
+        return true;
+    }
+}
+    </script>
+</body>
+
+</html>

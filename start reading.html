@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .back {
+
+            border-radius: 15px;
+
+        }
+
+        #quote {
+            font-size: 45px;
+            font-family: cursive;
+            color: rgb(22, 22, 22);
+            font-weight: 200;
+            padding-left: 60px;
+        }
+
+
+        .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            background-color: rgb(225, 148, 148);
+            padding: 5px;
+            margin: 90px;
+            border-radius: 15px;
+        }
+
+        .grid-item {
+            border-radius: 5px;
+            gap: 2px;
+            background-color: rgb(151, 123, 165);
+            border: 1px solid white;
+            padding: 7px;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        #btn {
+            background-color: rgb(250, 246, 246);
+            color: rgb(13, 13, 13);
+            font-size: 25px;
+            border-radius: 5px;
+            font-family: serif;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="book.css">
+
+</head>
+
+<body>
+
+    <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search books..">
+      
+    
+    <ol id='list'>
+        <li class="animals">Four-Steps-to-Forgiveness</li>
+        <li class="animals"> The-Most-Dangerous-Game</li>
+        <li class="animals">The-Woman-in-White</li>
+        <li class="animals">The-Hound-of-the-Baskervilles</li>
+        
+    </ol>
+      
+    
+    <script src="books.js"></script>
+    <div class="back">
+        <h1 id="quote">No two person ever read the same book --- Edmund Wilson</h1>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item"><img src="51kC7bTKPnL.jpg">
+            <div><a href="Four-Steps-to-Forgiveness-William-Fergus-Martin.pdf"><button id="btn">Read</button></a></div>
+        </div>
+        <div class="grid-item"><img src="61dqcFE5XfS.jpg">
+            <div><a href="The-Most-Dangerous-Game.pdf"><button id="btn">Read</button></a></div>
+        </div>
+        <div class="grid-item"><img src="the-woman-in-white-wilkie-collins.jpg">
+            <div><a href="The-Woman-in-White.pdf"><button id="btn"> Read</button></a></div>
+        </div>
+        <div class="grid-item"><img src="9781847494962.jpg">
+            <div><a href="The-Hound-of-the-Baskervilles.pdf"><button id="btn">Read</button></a></div>
+        </div>
+
+    </div>
+    <div><i class=""></i></div>
+</body>
+
+</html>

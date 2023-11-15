@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 55px;
+        }
+
+        .emoji {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            border: 4px solid black;
+            text-align: end;
+        }
+
+        .emoji::after,
+        .emoji::before {
+            content: "";
+            position: absolute;
+            top: 30%;
+            width: 15px;
+            height: 15px;
+            background: black;
+            border-radius: 50%;
+        }
+
+        .emoji::before {
+            left: 25%;
+        }
+
+        .emoji::after {
+            right: 25%;
+        }
+
+        .mouth {
+            position: relative;
+            width: 50px;
+            height: 10px;
+            border-radius: 50%;
+            border-bottom: 20px solid black;
+            top: 50%;
+            left: 25%;
+        }
+
+        .emoji {
+            animation: updown 2s ease-in-out infinite;
+        }
+
+        @keyframes updown {
+            0% {
+                transform: translateY(-20px);
+            }
+
+            50% {
+                transform: translateY('20px');
+            }
+
+            100% {
+                transform: translateY('-20px');
+            }
+        }
+
+        .btn {
+            margin-left: 655px;
+            margin-top: 150px;
+            font-size: 45px;
+            text-decoration: none;
+        }
+
+        button {
+            color: black;
+            font-size: 20px;
+            background-color: rgb(238, 96, 96);
+            border-radius: 5px;
+        }
+
+        body {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Thank the reviewer for the kind words. A simple, "Thank you for your kind words! ...
+    </h1>
+    <br><br>
+    <div class="emoji">
+        <div class="mouth"></div>
+    </div>
+
+    <div class="btn">Click here ! <a href="first page.html"> <button type="button" value="">Home</button></div></a>
+</body>
+
+</html>

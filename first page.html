@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <style>
+    
+    .back h1{
+      font-size: 100px;
+    }
+
+    .back {
+    
+      
+      padding-top: 300px;
+      margin-left: 570px;
+      font-weight: 100;
+      color: rgb(12, 12, 12);
+      font-weight: 10;
+      font-family: cursive;
+      font-size: 25px;
+    }
+
+    
+
+    a {
+      text-decoration: none;
+    }
+.bg{
+  height: 300px;
+  width: 350px;
+  padding-top: 50px;
+  
+margin-left: 500px;
+}
+
+body{
+  background-color: bisque;
+}
+#time{
+  font-size: 25px;
+  font-weight: 100px;
+  padding-left: 10px;
+}
+.abc{background-color: aquamarine;
+  
+}
+@media (max-width:1500px) {
+  body {
+      background-color: bisque;
+      
+  }
+}
+
+@media (max-width:1000px) {
+  body {
+      background-color: bisque;
+      
+  }
+}
+
+@media (max-width:600px) {
+  body {
+      background-color: bisque;
+      
+  }
+}
+  </style>
+</head>
+
+<body>
+
+
+  <div class="abc">
+    <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-info-bg-subtle rounded-5 shadow-sm" id="pillNav2"
+      role="tablist"
+      style="--bs-nav-link-color: var(--bs-danger); --bs-nav-pills-link-active-color: var(--bs-emphasis-color); --bs-nav-pills-link-active-bg: var(--bs-danger-bg-subtle);">
+      <li class="nav-item" role="presentation">
+        <a href="start reading.html"> <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button"
+            role="tab" aria-selected="true">Start Reading</button></a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a href="contact.html"><button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button"
+            role="tab" aria-selected="false">Feedback</button></a>
+      </li>
+      <li class="nav-item" role="presentation">
+       <a href="portfolio.html"> <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+          aria-selected="false">About Me </button></a>
+      </li></ul>
+  </div>
+      <div class="bg"><img src="istockphoto-1279904356-612x612.jpg"></div>
+  
+<div class="back">
+    
+    <p id="pgp">There is no friend as loyal as a book . </p>
+</div>
+<div id="time"><p></p></div>
+  
+</body>
+<script>
+
+  let time=document.getElementById('time');
+   setInterval(() => {
+        let t = new Date();
+        time.innerHTML = t.toLocaleTimeString();
+        
+    }, 1000)
+</script>
+</html>
